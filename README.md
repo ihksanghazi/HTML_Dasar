@@ -1,150 +1,145 @@
-# 📘 Modul 3: Teks & Heading
+# 📘 Modul 4: List & Link
 
-🎯 **Tujuan Pembelajaran**
+**🎯 Tujuan Pembelajaran**
 
 Setelah pertemuan ini, peserta mampu:
 
-- Menggunakan heading secara hierarkis dan terstruktur
-- Menampilkan teks paragraf dengan rapi
-- Memberi penekanan teks sesuai kebutuhan
-- Mengatur pemisahan baris teks
-- Membuat halaman artikel sederhana dengan struktur yang baik
+- Membuat daftar terurut dan tidak terurut
+- Memahami struktur list yang benar dalam HTML
+- Membuat hyperlink untuk navigasi halaman
+- Menggabungkan list dan link menjadi menu navigasi sederhana
 
-## 1️⃣ Heading (`<h1>` – `<h6>`)
+## 1️⃣ Ordered List (`<ol>`)
 
-Heading digunakan untuk `menyusun hierarki konten`, bukan sekadar memperbesar teks.
-**Tingkatan Heading:**
-| Tag | Fungsi |
-| --------------- | ---------------------------------------- |
-| `<h1>` | Judul utama halaman (1 saja per halaman) |
-| `<h2>` | Subjudul |
-| `<h3>` | Sub-subjudul |
-| `<h4>` – `<h6>` | Detail lanjutan |
-
-**Contoh:**
+Ordered List digunakan untuk **daftar yang memiliki urutan atau langkah.**
 
 ```html
-<h1>Belajar HTML Dasar</h1>
-<h2>Pengenalan</h2>
-<h3>Apa itu HTML?</h3>
+<ol>
+  <li>Install text editor</li>
+  <li>Buat file HTML</li>
+  <li>Buka di browser</li>
+</ol>
 ```
 
-**📌 Best Practice:**
+📌 Contoh penggunaan:
 
-- Gunakan `<h1>` hanya satu kali
-- Jangan lompat level (misalnya dari `<h1>` langsung ke `<h4>`)
+- Langkah tutorial
+- Prosedur kerja
+- Ranking
 
-## 2️⃣ Paragraf (`<p>`)
+## 2️⃣ Unordered List (`<ul>`)
 
-Paragraf digunakan untuk **teks utama** atau penjelasan konten.
+Unordered List digunakan untuk **daftar tanpa urutan khusus.**
 
 ```html
-<p>
-  HTML adalah bahasa markup yang digunakan untuk membangun struktur halaman web.
-</p>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
 ```
 
-📌 Browser otomatis memberi jarak antar paragraf.
+📌 Contoh penggunaan:
 
-## 3️⃣ Penekanan Teks (Bold, Italic, Underline)
+- Menu navigasi
+- Daftar fitur
+- Kategori
 
-### 🔹 Bold (`<b>`)
+## 3️⃣ List Item (`<li>`)
 
-Digunakan untuk menebalkan teks, tanpa makna khusus.
+`<li>` digunakan untuk **setiap item di dalam list** dan **harus berada di dalam** `<ol>` **atau** `<ul>`.
+❌ Salah:
 
 ```html
-<b>Teks Tebal</b>
+<li>Item</li>
 ```
 
-### 🔹 Italic (`<i>`)
-
-Digunakan untuk:
-
-- Istilah asing
-- Penekanan ringan
+✅ Benar:
 
 ```html
-<i>HyperText Markup Language</i>
+<ul>
+  <li>Item</li>
+</ul>
 ```
 
-### 🔹 Underline (`<u>`)
+## 4️⃣ Link (`<a href="">`)
 
-Digunakan untuk:
-
-- Menandai teks tertentu
-- Catatan atau penekanan visual
+Link digunakan untuk **berpindah halaman atau membuka sumber lain.**
+**Struktur Dasar:**
 
 ```html
-<u>Teks Garis Bawah</u>
+<a href="https://example.com">Kunjungi Website</a>
 ```
 
-## 4️⃣ Line Break (`<br>`)
+**Jenis Link:**
 
-Digunakan untuk **pindah baris tanpa membuat paragraf baru.**
+- **Internal link** (antar halaman)
+  ```html
+  <a href="about.html">Tentang</a>
+  ```
+- **External link** (ke website lain)
+
+  ```html
+  <a href="https://google.com">Google</a>
+  ```
+
+- **Link membuka tab baru**
+
+  ```html
+  <a href="https://google.com" target="_blank">Google</a>
+  ```
+
+📌 Atribut penting:
+
+- `href` → tujuan link
+- `target="\_blank"` → buka tab baru
+
+## 5️⃣ Menggabungkan List & Link (Menu Navigasi)
+
+List sering digunakan sebagai **menu navigasi website.**
 
 ```html
-<p>
-  Alamat:<br />
-  Jl. Merdeka No. 10<br />
-  Jakarta
-</p>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
 ```
 
-📌 Cocok untuk alamat, puisi, atau teks pendek bertingkat.
+📌 Struktur ini adalah **fondasi navbar** sebelum diberi CSS.
 
-## 5️⃣ Contoh Kombinasi Teks & Heading
-
-```html
-<h1>Teknologi Web</h1>
-
-<p>Teknologi web berkembang sangat pesat.</p>
-
-<h2>HTML</h2>
-<p>
-  <b>HTML</b> adalah dasar dari semua website modern. Bahasa ini digunakan untuk
-  <i>struktur konten</i>.
-</p>
-```
-
-## 🧪 Praktik: Membuat Halaman Artikel Pendek
+## 🧪 Praktik: Membuat Menu Website Sederhana
 
 **🎯 Tujuan Praktik**
-Menerapkan teks dan heading secara terstruktur seperti artikel online.
-
+Membuat navigasi website menggunakan list dan link.
 **Instruksi:**
-Buat file `artikel.html` dengan ketentuan:
 
-- 1 `<h1>` sebagai judul artikel
-- Minimal 2 `<h2>` sebagai subjudul
-- Paragraf penjelasan di setiap bagian
-- Gunakan `<b>`, `<i>`, atau `<u>` minimal 2 kali
-- Gunakan `<br>` jika diperlukan
+1. Buat 3 file HTML:
+   - `index.html`
+   - `about.html`
+   - `contact.html`
+2. Di setiap halaman, buat menu navigasi yang sama
+3. Gunakan `<ul>`, `<li>`, dan `<a>`
 
-Contoh Hasil Praktik:
+**Contoh** `index.html`:
 
 ```html
 <!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Belajar Web Development</title>
+    <title>Home</title>
   </head>
   <body>
-    <h1>Belajar Web Development</h1>
+    <h1>Website Sederhana</h1>
 
-    <h2>Apa itu Web Development?</h2>
-    <p>
-      Web development adalah proses pembuatan website. Bidang ini sangat
-      <b>dibutuhkan</b> di era digital.
-    </p>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
 
-    <h2>Teknologi yang Digunakan</h2>
-    <p>Teknologi utama dalam web adalah <i>HTML</i>, CSS, dan JavaScript.</p>
-
-    <p>
-      Ditulis oleh:<br />
-      <u>Ihksan</u>
-    </p>
+    <p>Selamat datang di halaman utama.</p>
   </body>
 </html>
 ```
