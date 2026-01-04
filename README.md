@@ -1,145 +1,129 @@
-# 📘 Modul 4: List & Link
+# 📘 Modul 5: Gambar & Media
 
 **🎯 Tujuan Pembelajaran**
-
 Setelah pertemuan ini, peserta mampu:
 
-- Membuat daftar terurut dan tidak terurut
-- Memahami struktur list yang benar dalam HTML
-- Membuat hyperlink untuk navigasi halaman
-- Menggabungkan list dan link menjadi menu navigasi sederhana
+- Menampilkan gambar menggunakan tag `<img>`
+- Memahami dan menggunakan atribut `src`, `alt`, `width`, dan `height`
+- Mengelola folder gambar dengan struktur yang rapi
+- Membuat galeri foto sederhana menggunakan HTML
 
-## 1️⃣ Ordered List (`<ol>`)
+## 1️⃣ Tag `<img>`
 
-Ordered List digunakan untuk **daftar yang memiliki urutan atau langkah.**
+Tag `<img>` digunakan untuk menampilkan gambar pada halaman web.
+📌 Karakteristik penting:
 
-```html
-<ol>
-  <li>Install text editor</li>
-  <li>Buat file HTML</li>
-  <li>Buka di browser</li>
-</ol>
-```
+- Tidak memiliki tag penutup
+- Bersifat inline element
+- Wajib memiliki atribut `src`
 
-📌 Contoh penggunaan:
-
-- Langkah tutorial
-- Prosedur kerja
-- Ranking
-
-## 2️⃣ Unordered List (`<ul>`)
-
-Unordered List digunakan untuk **daftar tanpa urutan khusus.**
+**Contoh Dasar:**
 
 ```html
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JavaScript</li>
-</ul>
+<img src="foto.jpg" />
 ```
 
-📌 Contoh penggunaan:
+## 2️⃣ Atribut Penting pada `<img>`
 
-- Menu navigasi
-- Daftar fitur
-- Kategori
-
-## 3️⃣ List Item (`<li>`)
-
-`<li>` digunakan untuk **setiap item di dalam list** dan **harus berada di dalam** `<ol>` **atau** `<ul>`.
-❌ Salah:
+### 🔹 `src` (source)
 
 ```html
-<li>Item</li>
+<img src="images/foto1.jpg" />
 ```
 
-✅ Benar:
+📌 Bisa berupa:
+
+- Path lokal (folder proyek)
+- URL online
+
+### 🔹 `alt` (alternative text)
+
+Digunakan untuk:
+
+- Aksesibilitas (screen reader)
+- Ditampilkan jika gambar gagal dimuat
+- SEO
 
 ```html
-<ul>
-  <li>Item</li>
-</ul>
+<img src="images/foto1.jpg" alt="Foto pemandangan gunung" />
 ```
 
-## 4️⃣ Link (`<a href="">`)
+📌 **Best practice**: selalu gunakan alt.
 
-Link digunakan untuk **berpindah halaman atau membuka sumber lain.**
-**Struktur Dasar:**
+### 🔹 width dan height
+
+Digunakan untuk mengatur ukuran gambar.
 
 ```html
-<a href="https://example.com">Kunjungi Website</a>
+<img src="images/foto1.jpg" width="300" height="200" />
 ```
 
-**Jenis Link:**
+📌 Satuan default adalah **pixel.**
 
-- **Internal link** (antar halaman)
-  ```html
-  <a href="about.html">Tentang</a>
-  ```
-- **External link** (ke website lain)
+## 3️⃣ Struktur Folder Gambar
 
-  ```html
-  <a href="https://google.com">Google</a>
-  ```
+Pengelolaan folder yang rapi memudahkan pengembangan.
 
-- **Link membuka tab baru**
+📁 Contoh struktur proyek:
+project-html/
+│
+├── index.html
+├── gallery.html
+└── images/
+├── foto1.jpg
+├── foto2.jpg
+└── foto3.jpg
 
-  ```html
-  <a href="https://google.com" target="_blank">Google</a>
-  ```
+📌 Praktik ini digunakan di proyek web profesional.
 
-📌 Atribut penting:
-
-- `href` → tujuan link
-- `target="\_blank"` → buka tab baru
-
-## 5️⃣ Menggabungkan List & Link (Menu Navigasi)
-
-List sering digunakan sebagai **menu navigasi website.**
+## 4️⃣ Menampilkan Banyak Gambar
 
 ```html
-<ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
+<img src="images/foto1.jpg" alt="Foto 1" width="200" />
+<img src="images/foto2.jpg" alt="Foto 2" width="200" />
+<img src="images/foto3.jpg" alt="Foto 3" width="200" />
 ```
 
-📌 Struktur ini adalah **fondasi navbar** sebelum diberi CSS.
+## 5️⃣ Contoh Galeri Foto Sederhana
 
-## 🧪 Praktik: Membuat Menu Website Sederhana
+```html
+<h2>Galeri Foto</h2>
+
+<img src="images/foto1.jpg" alt="Foto pantai" width="200" />
+<img src="images/foto2.jpg" alt="Foto gunung" width="200" />
+<img src="images/foto3.jpg" alt="Foto kota" width="200" />
+```
+
+📌 Pada tahap ini, galeri masih **tanpa CSS.**
+
+## 🧪 Praktik: Membuat Galeri Foto Sederhana
 
 **🎯 Tujuan Praktik**
-Membuat navigasi website menggunakan list dan link.
+Menerapkan penggunaan gambar dan folder media secara benar.
+
 **Instruksi:**
 
-1. Buat 3 file HTML:
-   - `index.html`
-   - `about.html`
-   - `contact.html`
-2. Di setiap halaman, buat menu navigasi yang sama
-3. Gunakan `<ul>`, `<li>`, dan `<a>`
+1. Buat folder `images`
+2. Masukkan minimal 3 gambar
+3. Buat file `gallery.html`
+4. Tampilkan semua gambar dalam satu halaman
+5. Gunakan atribut `alt` dan `width`
 
-**Contoh** `index.html`:
+**Contoh** `gallery.html`:
 
 ```html
 <!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Home</title>
+    <title>Galeri Foto</title>
   </head>
   <body>
-    <h1>Website Sederhana</h1>
+    <h1>Galeri Foto</h1>
 
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <p>Selamat datang di halaman utama.</p>
+    <img src="images/foto1.jpg" alt="Foto pertama" width="250" />
+    <img src="images/foto2.jpg" alt="Foto kedua" width="250" />
+    <img src="images/foto3.jpg" alt="Foto ketiga" width="250" />
   </body>
 </html>
 ```
