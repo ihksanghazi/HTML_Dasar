@@ -1,139 +1,144 @@
-# 📘 Modul 6: Tabel
+# 📘 Modul 7: Formulir (Form)
 
 **🎯 Tujuan Pembelajaran**
 Setelah pertemuan ini, peserta mampu:
 
-- Memahami fungsi tabel dalam HTML
-- Menggunakan tag `<table>`, `<tr>`, `<th>`, dan `<td>` dengan benar
-- Menampilkan data terstruktur dalam bentuk tabel
-- Membuat tabel jadwal pelajaran sederhana
+- Memahami fungsi form dalam website
+- Menggunakan tag `<form>` sebagai pembungkus input
+- Membuat berbagai jenis input data
+- Membangun form pendaftaran sederhana
 
-## 1️⃣ Fungsi Tabel dalam HTML
+## 1️⃣ Fungsi Form dalam Website
 
-Tabel digunakan untuk **menampilkan data terstruktur** (tabular data), seperti:
+Form digunakan untuk **mengambil data dari pengguna**, seperti:
 
-- Jadwal
-- Daftar nilai
-- Laporan data
-- Rekap informasi
+- Login
+- Registrasi
+- Pencarian
+- Feedback
 
-**📌 Catatan penting:**
-Tabel **bukan** untuk layout halaman (itu tugas CSS Grid/Flex).
+📌 Data dari form biasanya diproses oleh:
 
-## 2️⃣ Struktur Dasar Tabel HTML
+- Backend (PHP, Node.js, Python)
+- JavaScript
 
-**Tag Utama:**
-| Tag | Fungsi |
-| --------- | ----------------- |
-| `<table>` | Pembungkus tabel |
-| `<tr>` | Table row (baris) |
-| `<th>` | Header kolom |
-| `<td>` | Data tabel |
+## 2️⃣ Tag `<form>`
 
-**Contoh Struktur Dasar:**
+`<form>` adalah elemen utama yang membungkus semua input.
 
 ```html
-<table>
-  <tr>
-    <th>Hari</th>
-    <th>Mata Pelajaran</th>
-  </tr>
-  <tr>
-    <td>Senin</td>
-    <td>Matematika</td>
-  </tr>
-</table>
+<form>
+  <!-- input di sini -->
+</form>
 ```
 
-## 3️⃣ Border Tabel
+📌 Atribut penting (akan dipelajari lanjut):
 
-Untuk menampilkan garis tabel secara sederhana, gunakan atribut `border`.
+- `action` → tujuan pengiriman data
+- `method` → metode pengiriman (`GET`, `POST`)
+
+## 3️⃣ Input (`<input>`)
+
+Tag `<input>` digunakan untuk memasukkan data dari pengguna.
+
+### 🔹 Input Text
 
 ```html
-<table border="1"></table>
+<input type="text" placeholder="Nama Lengkap" />
 ```
 
-📌 Atribut ini digunakan **untuk pembelajaran dasar**.
-Di praktik profesional, border biasanya diatur dengan **CSS**.
-
-## 4️⃣ Contoh Tabel Lengkap
+### 🔹 Input Password
 
 ```html
-<table border="1">
-  <tr>
-    <th>Hari</th>
-    <th>Jam</th>
-    <th>Mata Pelajaran</th>
-  </tr>
-  <tr>
-    <td>Senin</td>
-    <td>08.00 - 09.30</td>
-    <td>Matematika</td>
-  </tr>
-  <tr>
-    <td>Selasa</td>
-    <td>10.00 - 11.30</td>
-    <td>Bahasa Inggris</td>
-  </tr>
-</table>
+<input type="password" placeholder="Password" />
 ```
 
-## 5️⃣ Best Practice Dasar Tabel
+### 🔹 Input Email
 
-- Gunakan `<th>` untuk judul kolom
-- Jangan gunakan tabel untuk layout
-- Pastikan data mudah dibaca
-- Susun kolom secara konsisten
+```html
+<input type="email" placeholder="Email" />
+```
 
-## 🧪 Praktik: Membuat Tabel Jadwal Pelajaran
+📌 `placeholder` membantu pengguna memahami input.
+
+## 4️⃣ Textarea (`<textarea>`)
+
+Digunakan untuk **teks panjang**.
+
+```html
+<textarea rows="4" cols="30" placeholder="Alamat"></textarea>
+```
+
+📌 Cocok untuk:
+
+- Alamat
+- Deskripsi
+- Pesan
+
+## 5️⃣ Button (`<button>`)
+
+Digunakan untuk **mengirim atau menjalankan aksi**.
+
+```html
+<button type="submit">Daftar</button>
+```
+
+Jenis button:
+
+- `submit` → mengirim form
+- `button` → tombol biasa (untuk JavaScript)
+
+## 6️⃣ Contoh Form Sederhana
+
+```html
+<form>
+  <input type="text" placeholder="Nama" /><br /><br />
+  <input type="email" placeholder="Email" /><br /><br />
+  <input type="password" placeholder="Password" /><br /><br />
+  <textarea placeholder="Alamat"></textarea><br /><br />
+  <button type="submit">Kirim</button>
+</form>
+```
+
+## 🧪 Praktik: Form Pendaftaran Siswa
 
 **🎯 Tujuan Praktik**
-Menerapkan struktur tabel untuk data jadwal.
-
+Membuat form pendaftaran menggunakan berbagai input dasar.
 **Instruksi:**
-Buat file jadwal.html dengan ketentuan:
+Buat file `form-pendaftaran.html` dengan ketentuan:
 
-- Gunakan <table border="1">
-- Minimal 5 baris data
-- Kolom:
-  - Hari
-  - Jam
-  - Mata Pelajaran
+- Menggunakan `<form>`
+- Minimal 3 input:
+- 1 `<textarea>` untuk alamat
+- 1 `<button>` untuk submit
 
-## Contoh Hasil Praktik:
+**Contoh Hasil Praktik:**
 
 ```html
 <!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Jadwal Pelajaran</title>
+    <title>Form Pendaftaran</title>
   </head>
   <body>
-    <h1>Jadwal Pelajaran</h1>
+    <h1>Form Pendaftaran Siswa</h1>
 
-    <table border="1">
-      <tr>
-        <th>Hari</th>
-        <th>Jam</th>
-        <th>Mata Pelajaran</th>
-      </tr>
-      <tr>
-        <td>Senin</td>
-        <td>08.00 - 09.30</td>
-        <td>Matematika</td>
-      </tr>
-      <tr>
-        <td>Selasa</td>
-        <td>09.30 - 11.00</td>
-        <td>Fisika</td>
-      </tr>
-      <tr>
-        <td>Rabu</td>
-        <td>08.00 - 09.30</td>
-        <td>Pemrograman Web</td>
-      </tr>
-    </table>
+    <form>
+      <p>
+        <input type="text" placeholder="Nama Lengkap" />
+      </p>
+      <p>
+        <input type="email" placeholder="Email" />
+      </p>
+      <p>
+        <input type="password" placeholder="Password" />
+      </p>
+      <p>
+        <textarea placeholder="Alamat Lengkap"></textarea>
+      </p>
+      <button type="submit">Daftar</button>
+    </form>
   </body>
 </html>
 ```
