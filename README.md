@@ -1,167 +1,103 @@
-# 📘 Pertemuan 8: Semantic HTML
+# 📘 Modul 9: HTML + CSS Dasar (Perkenalan)
 
 **🎯 Tujuan Pembelajaran**
 Setelah pertemuan ini, peserta mampu:
 
-- Memahami konsep Semantic HTML
-- Menggunakan elemen semantic untuk membangun struktur website modern
-- Menjelaskan manfaat semantic HTML terhadap SEO dan aksesibilitas
-- Membuat layout website sederhana dengan struktur semantic
+- Memahami peran CSS dalam pengembangan web
+- Menjelaskan hubungan HTML dan CSS
+- Menggunakan Inline CSS
+- Mengatur warna, font, dan background pada halaman HTML
+- Mempercantik tampilan halaman web sederhana
 
-## 1️⃣ Apa Itu Semantic HTML?
+## 1️⃣ Apa Itu CSS?
 
-**Semantic HTML** adalah penggunaan tag HTML yang **memiliki makna jelas** sesuai fungsinya.
-📌 Contoh:
+**CSS (Cascading Style Sheets)** adalah bahasa yang digunakan untuk:
 
-- `<header>` → bagian kepala halaman
-- `<footer>` → bagian penutup halaman
+- Mengatur **tampilan** dan **layout** halaman web
+- Memisahkan **struktur (HTML)** dan **desain (CSS)**
 
-❌ Non-semantic:
+📌 Analogi:
 
-```html
-<div></div>
-```
+- HTML → struktur bangunan
+- CSS → desain, warna, dan dekorasi
 
-✅ Semantic:
+## 2️⃣ Cara Menggunakan CSS (Pengenalan)
 
-```html
-<header></header>
-```
+Ada 3 cara menggunakan CSS:
 
-## 2️⃣ Elemen Semantic Utama
+1. Inline CSS
+2. Internal CSS
+3. External CSS
 
-### 🔹 `<header>`
+👉 Pada pertemuan ini, fokus pada **Inline CSS**.
 
-Digunakan untuk:
+## 3️⃣ Inline CSS
 
-- Judul halaman
-- Logo
-- Informasi pembuka
+Inline CSS ditulis langsung di dalam tag HTML menggunakan atribut `style`.
+**Contoh**
 
 ```html
-<header>
-  <h1>Website Saya</h1>
-</header>
+<p style="color:red;">Teks Merah</p>
 ```
 
-### 🔹 `<nav>`
-
-Digunakan untuk **navigasi utama**.
+📌 Sintaks:
 
 ```html
-<nav>
-  <a href="#">Home</a> | <a href="#">About</a> |
-  <a href="#">Contact</a>
-</nav>
+style="property: value;"
 ```
 
-📌 Biasanya berisi menu.
+## 4️⃣ Properti CSS Dasar
 
-### 🔹 `<main>`
-
-Menampung **konten utama** halaman.
+### 🔹 Warna (`color`)
 
 ```html
-<main>
-  <p>Konten utama website</p>
-</main>
+<p style="color: blue;">Teks Biru</p>
 ```
 
-📌 Hanya **1** `<main>` **per halaman**.
+Bisa menggunakan:
 
-### 🔹 `<section>`
+- Nama warna (`red`, `blue`)
+- Kode hex (`#ff0000`)
 
-Digunakan untuk **mengelompokkan konten** berdasarkan topik.
+### 🔹 Font (`font-family`, `font-size`)
 
 ```html
-<section>
-  <h2>Tentang Kami</h2>
-  <p>Deskripsi singkat.</p>
-</section>
+<p style="font-family: Arial; font-size: 18px;">Teks dengan font Arial</p>
 ```
 
-### 🔹 `<article>`
-
-Digunakan untuk konten **mandiri** dan bisa berdiri sendiri.
+### 🔹 Background (`background-color`)
 
 ```html
-<article>
-  <h3>Artikel Pertama</h3>
-  <p>Isi artikel.</p>
-</article>
+<div style="background-color: lightgray;">Konten dengan background</div>
 ```
 
-📌 Cocok untuk:
-
-- Artikel blog
-- Berita
-- Postingan
-
-### 🔹 `<footer>`
-
-Bagian penutup halaman.
+## 5️⃣ Contoh Kombinasi CSS Dasar
 
 ```html
-<footer>
-  <p>&copy; 2026 Website Saya</p>
-</footer>
+<h1 style="color: darkblue;">Judul Website</h1>
+
+<p style="font-size: 16px; color: gray;">
+  Ini adalah paragraf dengan style CSS.
+</p>
 ```
 
-## 3️⃣ Struktur Semantic HTML Lengkap
+📌 Inline CSS cocok untuk:
 
-```html
-<header>
-  <h1>Website Saya</h1>
-</header>
+- Demo cepat
+- Pembelajaran awal
+  ❌ Tidak disarankan untuk proyek besar
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-</nav>
-
-<main>
-  <section>
-    <h2>Artikel Terbaru</h2>
-    <article>
-      <h3>Belajar HTML</h3>
-      <p>HTML adalah dasar web.</p>
-    </article>
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2026 Website Saya</p>
-</footer>
-```
-
-## 4️⃣ Manfaat Semantic HTML
-
-**✅ SEO (Search Engine Optimization)**
-
-- Mesin pencari lebih mudah memahami konten
-
-**✅ Aksesibilitas**
-
-- Screen reader lebih ramah bagi pengguna difabel
-
-**✅ Kode Lebih Rapi**
-
-- Mudah dibaca dan dikelola
-- Standar industri web modern
-
-## 🧪 Praktik: Membuat Layout Website Sederhana
+## 🧪 Praktik: Mempercantik Halaman HTML
 
 **🎯 Tujuan Praktik**
-Membuat layout website menggunakan struktur semantic HTML.
-
+Menerapkan CSS dasar untuk memperbaiki tampilan halaman HTML.
 **Instruksi:**
-Buat file `layout.html` dengan ketentuan:
+Gunakan file HTML sebelumnya (biodata / artikel), lalu:
 
-- Gunakan `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`
-- Minimal 1 `<article>`
-- Menu navigasi sederhana
-- Konten bebas (profil / artikel)
+- Ubah warna judul
+- Atur ukuran font paragraf
+- Tambahkan background pada bagian tertentu
+- Gunakan minimal 3 properti CSS
 
 **Contoh Hasil Praktik:**
 
@@ -170,30 +106,18 @@ Buat file `layout.html` dengan ketentuan:
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Website Semantic</title>
+    <title>HTML + CSS Dasar</title>
   </head>
   <body>
-    <header>
-      <h1>Website Pribadi</h1>
-    </header>
+    <h1 style="color: darkgreen;">Profil Saya</h1>
 
-    <nav>
-      <a href="#">Home</a> | <a href="#">Profil</a> |
-      <a href="#">Kontak</a>
-    </nav>
+    <p style="font-size: 18px; color: #333;">
+      Saya sedang belajar HTML dan CSS dasar.
+    </p>
 
-    <main>
-      <section>
-        <h2>Tentang Saya</h2>
-        <article>
-          <p>Saya sedang belajar web development.</p>
-        </article>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2026 Website Saya</p>
-    </footer>
+    <div style="background-color: #f0f0f0; padding: 10px;">
+      <p style="color: blue;">CSS membuat tampilan website lebih menarik.</p>
+    </div>
   </body>
 </html>
 ```
