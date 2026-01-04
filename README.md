@@ -1,123 +1,119 @@
-# 📘 Modul 9: HTML + CSS Dasar (Perkenalan)
+# 📘 Modul 10: Mini Project Website
 
-**🎯 Tujuan Pembelajaran**
-Setelah pertemuan ini, peserta mampu:
+## 🎯 Tujuan Pembelajaran
 
-- Memahami peran CSS dalam pengembangan web
-- Menjelaskan hubungan HTML dan CSS
-- Menggunakan Inline CSS
-- Mengatur warna, font, dan background pada halaman HTML
-- Mempercantik tampilan halaman web sederhana
+Setelah menyelesaikan mini project ini, peserta mampu:
 
-## 1️⃣ Apa Itu CSS?
+- Mengintegrasikan seluruh materi HTML & CSS dasar
+- Membangun website statis sederhana dari nol
+- Menyusun struktur HTML yang rapi dan konsisten
+- Menyajikan konten web yang informatif dan fungsional
 
-**CSS (Cascading Style Sheets)** adalah bahasa yang digunakan untuk:
+## 🗂️ Gambaran Mini Project
 
-- Mengatur **tampilan** dan **layout** halaman web
-- Memisahkan **struktur (HTML)** dan **desain (CSS)**
+Peserta diminta membuat **1 website statis sederhana** dengan **tema bebas** (pilih salah satu):
 
-📌 Analogi:
+**🔹 Pilihan Project:**
 
-- HTML → struktur bangunan
-- CSS → desain, warna, dan dekorasi
+1. **Website Biodata Pribadi**
+2. **Website Hobi / Komunitas**
+3. **Website Profil Sekolah / Kampus**
 
-## 2️⃣ Cara Menggunakan CSS (Pengenalan)
+## 📌 Kriteria Wajib Project
 
-Ada 3 cara menggunakan CSS:
+Website **harus memenuhi semua poin berikut:**
 
-1. Inline CSS
-2. Internal CSS
-3. External CSS
+### ✅ 1. Konten HTML Lengkap
 
-👉 Pada pertemuan ini, fokus pada **Inline CSS**.
+Wajib menggunakan:
 
-## 3️⃣ Inline CSS
+- Teks (heading & paragraf)
+- Gambar (`<img>`)
+- Link (`<a>`)
+- Tabel (`<table>`)
+- Form (`<form>`)
 
-Inline CSS ditulis langsung di dalam tag HTML menggunakan atribut `style`.
-**Contoh**
+### ✅ 2. Struktur HTML Rapi
 
-```html
-<p style="color:red;">Teks Merah</p>
-```
+- Menggunakan struktur dasar HTML (`<!DOCTYPE>`, `<html>`, `<head>`, `<body>`)
+- Penulisan tag konsisten & mudah dibaca
+- Indentasi rapi
 
-📌 Sintaks:
+### ✅ 3. Minimal 3 Halaman
 
-```html
-style="property: value;"
-```
+Contoh:
 
-## 4️⃣ Properti CSS Dasar
+- index.html
+- about.html
+- contact.html
 
-### 🔹 Warna (`color`)
+### ⭐ Bonus (Nilai Tambahan)
 
-```html
-<p style="color: blue;">Teks Biru</p>
-```
+- Menggunakan **Semantic HTML**
+  - `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`
+- Inline CSS untuk tampilan lebih menarik
 
-Bisa menggunakan:
+### 🗃️ Struktur Folder yang Disarankan
 
-- Nama warna (`red`, `blue`)
-- Kode hex (`#ff0000`)
+- mini-project/
+  - index.html
+  - about.html
+  - contact.html
+  - images/
+    - foto1.jpg
+    - foto2.jpg
 
-### 🔹 Font (`font-family`, `font-size`)
+### 🧪 Contoh Fitur yang Bisa Ditampilkan
 
-```html
-<p style="font-family: Arial; font-size: 18px;">Teks dengan font Arial</p>
-```
+**🔹 Website Biodata**
 
-### 🔹 Background (`background-color`)
+- Foto profil
+- Tabel data diri
+- Form kontak
 
-```html
-<div style="background-color: lightgray;">Konten dengan background</div>
-```
+**🔹 Website Hobi**
 
-## 5️⃣ Contoh Kombinasi CSS Dasar
+- Galeri gambar
+- Artikel singkat
+- Link media sosial
 
-```html
-<h1 style="color: darkblue;">Judul Website</h1>
+**🔹 Website Profil Sekolah**
 
-<p style="font-size: 16px; color: gray;">
-  Ini adalah paragraf dengan style CSS.
-</p>
-```
+- Informasi sekolah
+- Tabel jadwal pelajaran
+- Form pendaftaran
 
-📌 Inline CSS cocok untuk:
-
-- Demo cepat
-- Pembelajaran awal
-  ❌ Tidak disarankan untuk proyek besar
-
-## 🧪 Praktik: Mempercantik Halaman HTML
-
-**🎯 Tujuan Praktik**
-Menerapkan CSS dasar untuk memperbaiki tampilan halaman HTML.
-**Instruksi:**
-Gunakan file HTML sebelumnya (biodata / artikel), lalu:
-
-- Ubah warna judul
-- Atur ukuran font paragraf
-- Tambahkan background pada bagian tertentu
-- Gunakan minimal 3 properti CSS
-
-**Contoh Hasil Praktik:**
+## 🧩 Contoh Struktur Halaman (Semantic HTML)
 
 ```html
-<!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <title>HTML + CSS Dasar</title>
-  </head>
-  <body>
-    <h1 style="color: darkgreen;">Profil Saya</h1>
+<header>
+  <h1>Website Saya</h1>
+</header>
 
-    <p style="font-size: 18px; color: #333;">
-      Saya sedang belajar HTML dan CSS dasar.
-    </p>
+<nav>
+  <a href="index.html">Home</a> | <a href="about.html">About</a> |
+  <a href="contact.html">Contact</a>
+</nav>
 
-    <div style="background-color: #f0f0f0; padding: 10px;">
-      <p style="color: blue;">CSS membuat tampilan website lebih menarik.</p>
-    </div>
-  </body>
-</html>
+<main>
+  <section>
+    <h2>Konten Utama</h2>
+    <p>Deskripsi singkat.</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Website Saya</p>
+</footer>
 ```
+
+### 📝 Contoh Checklist Penilaian
+
+| Kriteria               | Status |
+| ---------------------- | ------ |
+| Struktur HTML lengkap  | ✅     |
+| Menggunakan gambar     | ✅     |
+| Menggunakan tabel      | ✅     |
+| Menggunakan form       | ✅     |
+| Navigasi antar halaman | ✅     |
+| Semantic HTML (bonus)  | ⭐     |
