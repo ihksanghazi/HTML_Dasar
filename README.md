@@ -1,166 +1,124 @@
-# 📘 Modul 2: Struktur Dasar HTML
+# 📘 Modul 3: Teks & Heading
 
-**🎯 Tujuan Pembelajaran**
+🎯 **Tujuan Pembelajaran**
+
 Setelah pertemuan ini, peserta mampu:
 
-- Memahami kerangka dasar dokumen HTML secara menyeluruh
-- Menjelaskan fungsi tag `<html>`, `<head>`, dan `<body>`
-- Menggunakan `<title>` dan `<meta>` secara tepat
-- Menulis komentar HTML dengan benar
-- Membangun halaman biodata sederhana dengan struktur HTML rapi
+- Menggunakan heading secara hierarkis dan terstruktur
+- Menampilkan teks paragraf dengan rapi
+- Memberi penekanan teks sesuai kebutuhan
+- Mengatur pemisahan baris teks
+- Membuat halaman artikel sederhana dengan struktur yang baik
 
----
+## 1️⃣ Heading (`<h1>` – `<h6>`)
 
-## 1️⃣ Kerangka Dasar Dokumen HTML
+Heading digunakan untuk `menyusun hierarki konten`, bukan sekadar memperbesar teks.
+**Tingkatan Heading:**
+| Tag | Fungsi |
+| --------------- | ---------------------------------------- |
+| `<h1>` | Judul utama halaman (1 saja per halaman) |
+| `<h2>` | Subjudul |
+| `<h3>` | Sub-subjudul |
+| `<h4>` – `<h6>` | Detail lanjutan |
 
-HTML memiliki struktur standar yang wajib ada agar browser dapat membaca halaman dengan benar.
-
-Struktur umum:
-
-```html
-<!DOCTYPE html>
-<html>
-  <head> </head>
-  <body></body>
-</html>
-```
-
-📌 Struktur ini menjadi fondasi untuk:
-
-- SEO
-- Aksesibilitas
-- Pengembangan web modern (framework, library)
-
----
-
-## 2️⃣ Tag `<html>`, `<head>`, dan `<body>`
-
-### 🔹 `<html>`
-
-- Elemen utama pembungkus seluruh isi dokumen
-- Biasanya ditambahkan atribut lang
+**Contoh:**
 
 ```html
-<html lang="id"></html>
+<h1>Belajar HTML Dasar</h1>
+<h2>Pengenalan</h2>
+<h3>Apa itu HTML?</h3>
 ```
 
-📌 Berguna untuk:
+**📌 Best Practice:**
 
-- Aksesibilitas
-- SEO
-- Screen reader
+- Gunakan `<h1>` hanya satu kali
+- Jangan lompat level (misalnya dari `<h1>` langsung ke `<h4>`)
 
-### 🔹 `<head>`
+## 2️⃣ Paragraf (`<p>`)
 
-Berisi `informasi metadata`, bukan konten visual.
+Paragraf digunakan untuk **teks utama** atau penjelasan konten.
+
+```html
+<p>
+  HTML adalah bahasa markup yang digunakan untuk membangun struktur halaman web.
+</p>
+```
+
+📌 Browser otomatis memberi jarak antar paragraf.
+
+## 3️⃣ Penekanan Teks (Bold, Italic, Underline)
+
+### 🔹 Bold (`<b>`)
+
+Digunakan untuk menebalkan teks, tanpa makna khusus.
+
+```html
+<b>Teks Tebal</b>
+```
+
+### 🔹 Italic (`<i>`)
 
 Digunakan untuk:
 
-- Judul halaman
-- Informasi karakter
-- SEO
-- Link CSS & script
-
-### 🔹 `<body>`
-
-Berisi **konten utama** yang ditampilkan ke pengguna.
-Contoh:
-
-- Teks
-- Gambar
-- Tabel
-- Form
-
----
-
-## 3️⃣ Tag `<title>` dan `<meta>`
-
-### 🔹 `<title>`
-
-Menentukan:
-
-- Judul tab browser
-- Nama halaman di hasil pencarian
+- Istilah asing
+- Penekanan ringan
 
 ```html
-<title>Biodata Mahasiswa</title>
+<i>HyperText Markup Language</i>
 ```
 
-### 🔹 `<meta>`
+### 🔹 Underline (`<u>`)
 
-Digunakan untuk memberikan informasi tambahan tentang halaman.
-Contoh penting:
+Digunakan untuk:
+
+- Menandai teks tertentu
+- Catatan atau penekanan visual
 
 ```html
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Halaman biodata pribadi" />
+<u>Teks Garis Bawah</u>
 ```
 
-📌 Fungsi utama:
+## 4️⃣ Line Break (`<br>`)
 
-- Encoding karakter
-- Responsive design
-- SEO dasar
-
----
-
-## 4️⃣ Komentar HTML
-
-Komentar digunakan untuk:
-
-- Memberi catatan pada kode
-- Membantu kolaborasi tim
-- Menonaktifkan sementara kode
-
-Sintaks:
+Digunakan untuk **pindah baris tanpa membuat paragraf baru.**
 
 ```html
-<!-- Ini komentar -->
+<p>
+  Alamat:<br />
+  Jl. Merdeka No. 10<br />
+  Jakarta
+</p>
 ```
 
-📌 Komentar **tidak ditampilkan** di browser.
+📌 Cocok untuk alamat, puisi, atau teks pendek bertingkat.
 
----
-
-## 5️⃣ Contoh Struktur HTML Lengkap
+## 5️⃣ Contoh Kombinasi Teks & Heading
 
 ```html
-<!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Biodata Saya</title>
-  </head>
-  <body>
-    <!-- Judul Halaman -->
-    <h1>Biodata</h1>
+<h1>Teknologi Web</h1>
 
-    <p>Halo, nama saya Andi.</p>
-  </body>
-</html>
+<p>Teknologi web berkembang sangat pesat.</p>
+
+<h2>HTML</h2>
+<p>
+  <b>HTML</b> adalah dasar dari semua website modern. Bahasa ini digunakan untuk
+  <i>struktur konten</i>.
+</p>
 ```
 
----
+## 🧪 Praktik: Membuat Halaman Artikel Pendek
 
-## 🧪 Praktik: Membuat Halaman Biodata Sederhana
+**🎯 Tujuan Praktik**
+Menerapkan teks dan heading secara terstruktur seperti artikel online.
 
-🎯 **Tujuan Praktik**
-
-Menerapkan struktur dasar HTML dengan benar dan rapi.
 **Instruksi:**
+Buat file `artikel.html` dengan ketentuan:
 
-Buat file bernama biodata.html yang berisi:
-
-- Struktur HTML lengkap
-- Judul halaman menggunakan <title>
-- Minimal 1 komentar HTML
-- Konten biodata:
-  - Nama
-  - Umur
-  - Hobi
-  - Deskripsi singkat
+- 1 `<h1>` sebagai judul artikel
+- Minimal 2 `<h2>` sebagai subjudul
+- Paragraf penjelasan di setiap bagian
+- Gunakan `<b>`, `<i>`, atau `<u>` minimal 2 kali
+- Gunakan `<br>` jika diperlukan
 
 Contoh Hasil Praktik:
 
@@ -169,15 +127,24 @@ Contoh Hasil Praktik:
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Biodata Diri</title>
+    <title>Belajar Web Development</title>
   </head>
   <body>
-    <!-- Informasi pribadi -->
-    <h1>Biodata</h1>
+    <h1>Belajar Web Development</h1>
 
-    <p>Nama: Raffly</p>
-    <p>Umur: 22 Tahun</p>
-    <p>Hobi: Coding</p>
+    <h2>Apa itu Web Development?</h2>
+    <p>
+      Web development adalah proses pembuatan website. Bidang ini sangat
+      <b>dibutuhkan</b> di era digital.
+    </p>
+
+    <h2>Teknologi yang Digunakan</h2>
+    <p>Teknologi utama dalam web adalah <i>HTML</i>, CSS, dan JavaScript.</p>
+
+    <p>
+      Ditulis oleh:<br />
+      <u>Ihksan</u>
+    </p>
   </body>
 </html>
 ```
