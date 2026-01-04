@@ -1,116 +1,167 @@
-# 📘 Modul 7: Formulir (Form)
+# 📘 Pertemuan 8: Semantic HTML
 
 **🎯 Tujuan Pembelajaran**
 Setelah pertemuan ini, peserta mampu:
 
-- Memahami fungsi form dalam website
-- Menggunakan tag `<form>` sebagai pembungkus input
-- Membuat berbagai jenis input data
-- Membangun form pendaftaran sederhana
+- Memahami konsep Semantic HTML
+- Menggunakan elemen semantic untuk membangun struktur website modern
+- Menjelaskan manfaat semantic HTML terhadap SEO dan aksesibilitas
+- Membuat layout website sederhana dengan struktur semantic
 
-## 1️⃣ Fungsi Form dalam Website
+## 1️⃣ Apa Itu Semantic HTML?
 
-Form digunakan untuk **mengambil data dari pengguna**, seperti:
+**Semantic HTML** adalah penggunaan tag HTML yang **memiliki makna jelas** sesuai fungsinya.
+📌 Contoh:
 
-- Login
-- Registrasi
-- Pencarian
-- Feedback
+- `<header>` → bagian kepala halaman
+- `<footer>` → bagian penutup halaman
 
-📌 Data dari form biasanya diproses oleh:
-
-- Backend (PHP, Node.js, Python)
-- JavaScript
-
-## 2️⃣ Tag `<form>`
-
-`<form>` adalah elemen utama yang membungkus semua input.
+❌ Non-semantic:
 
 ```html
-<form>
-  <!-- input di sini -->
-</form>
+<div></div>
 ```
 
-📌 Atribut penting (akan dipelajari lanjut):
-
-- `action` → tujuan pengiriman data
-- `method` → metode pengiriman (`GET`, `POST`)
-
-## 3️⃣ Input (`<input>`)
-
-Tag `<input>` digunakan untuk memasukkan data dari pengguna.
-
-### 🔹 Input Text
+✅ Semantic:
 
 ```html
-<input type="text" placeholder="Nama Lengkap" />
+<header></header>
 ```
 
-### 🔹 Input Password
+## 2️⃣ Elemen Semantic Utama
+
+### 🔹 `<header>`
+
+Digunakan untuk:
+
+- Judul halaman
+- Logo
+- Informasi pembuka
 
 ```html
-<input type="password" placeholder="Password" />
+<header>
+  <h1>Website Saya</h1>
+</header>
 ```
 
-### 🔹 Input Email
+### 🔹 `<nav>`
+
+Digunakan untuk **navigasi utama**.
 
 ```html
-<input type="email" placeholder="Email" />
+<nav>
+  <a href="#">Home</a> | <a href="#">About</a> |
+  <a href="#">Contact</a>
+</nav>
 ```
 
-📌 `placeholder` membantu pengguna memahami input.
+📌 Biasanya berisi menu.
 
-## 4️⃣ Textarea (`<textarea>`)
+### 🔹 `<main>`
 
-Digunakan untuk **teks panjang**.
+Menampung **konten utama** halaman.
 
 ```html
-<textarea rows="4" cols="30" placeholder="Alamat"></textarea>
+<main>
+  <p>Konten utama website</p>
+</main>
+```
+
+📌 Hanya **1** `<main>` **per halaman**.
+
+### 🔹 `<section>`
+
+Digunakan untuk **mengelompokkan konten** berdasarkan topik.
+
+```html
+<section>
+  <h2>Tentang Kami</h2>
+  <p>Deskripsi singkat.</p>
+</section>
+```
+
+### 🔹 `<article>`
+
+Digunakan untuk konten **mandiri** dan bisa berdiri sendiri.
+
+```html
+<article>
+  <h3>Artikel Pertama</h3>
+  <p>Isi artikel.</p>
+</article>
 ```
 
 📌 Cocok untuk:
 
-- Alamat
-- Deskripsi
-- Pesan
+- Artikel blog
+- Berita
+- Postingan
 
-## 5️⃣ Button (`<button>`)
+### 🔹 `<footer>`
 
-Digunakan untuk **mengirim atau menjalankan aksi**.
-
-```html
-<button type="submit">Daftar</button>
-```
-
-Jenis button:
-
-- `submit` → mengirim form
-- `button` → tombol biasa (untuk JavaScript)
-
-## 6️⃣ Contoh Form Sederhana
+Bagian penutup halaman.
 
 ```html
-<form>
-  <input type="text" placeholder="Nama" /><br /><br />
-  <input type="email" placeholder="Email" /><br /><br />
-  <input type="password" placeholder="Password" /><br /><br />
-  <textarea placeholder="Alamat"></textarea><br /><br />
-  <button type="submit">Kirim</button>
-</form>
+<footer>
+  <p>&copy; 2026 Website Saya</p>
+</footer>
 ```
 
-## 🧪 Praktik: Form Pendaftaran Siswa
+## 3️⃣ Struktur Semantic HTML Lengkap
+
+```html
+<header>
+  <h1>Website Saya</h1>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<main>
+  <section>
+    <h2>Artikel Terbaru</h2>
+    <article>
+      <h3>Belajar HTML</h3>
+      <p>HTML adalah dasar web.</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Website Saya</p>
+</footer>
+```
+
+## 4️⃣ Manfaat Semantic HTML
+
+**✅ SEO (Search Engine Optimization)**
+
+- Mesin pencari lebih mudah memahami konten
+
+**✅ Aksesibilitas**
+
+- Screen reader lebih ramah bagi pengguna difabel
+
+**✅ Kode Lebih Rapi**
+
+- Mudah dibaca dan dikelola
+- Standar industri web modern
+
+## 🧪 Praktik: Membuat Layout Website Sederhana
 
 **🎯 Tujuan Praktik**
-Membuat form pendaftaran menggunakan berbagai input dasar.
-**Instruksi:**
-Buat file `form-pendaftaran.html` dengan ketentuan:
+Membuat layout website menggunakan struktur semantic HTML.
 
-- Menggunakan `<form>`
-- Minimal 3 input:
-- 1 `<textarea>` untuk alamat
-- 1 `<button>` untuk submit
+**Instruksi:**
+Buat file `layout.html` dengan ketentuan:
+
+- Gunakan `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`
+- Minimal 1 `<article>`
+- Menu navigasi sederhana
+- Konten bebas (profil / artikel)
 
 **Contoh Hasil Praktik:**
 
@@ -119,26 +170,30 @@ Buat file `form-pendaftaran.html` dengan ketentuan:
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Form Pendaftaran</title>
+    <title>Website Semantic</title>
   </head>
   <body>
-    <h1>Form Pendaftaran Siswa</h1>
+    <header>
+      <h1>Website Pribadi</h1>
+    </header>
 
-    <form>
-      <p>
-        <input type="text" placeholder="Nama Lengkap" />
-      </p>
-      <p>
-        <input type="email" placeholder="Email" />
-      </p>
-      <p>
-        <input type="password" placeholder="Password" />
-      </p>
-      <p>
-        <textarea placeholder="Alamat Lengkap"></textarea>
-      </p>
-      <button type="submit">Daftar</button>
-    </form>
+    <nav>
+      <a href="#">Home</a> | <a href="#">Profil</a> |
+      <a href="#">Kontak</a>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Tentang Saya</h2>
+        <article>
+          <p>Saya sedang belajar web development.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Website Saya</p>
+    </footer>
   </body>
 </html>
 ```
