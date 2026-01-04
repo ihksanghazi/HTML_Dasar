@@ -1,129 +1,139 @@
-# 📘 Modul 5: Gambar & Media
+# 📘 Modul 6: Tabel
 
 **🎯 Tujuan Pembelajaran**
 Setelah pertemuan ini, peserta mampu:
 
-- Menampilkan gambar menggunakan tag `<img>`
-- Memahami dan menggunakan atribut `src`, `alt`, `width`, dan `height`
-- Mengelola folder gambar dengan struktur yang rapi
-- Membuat galeri foto sederhana menggunakan HTML
+- Memahami fungsi tabel dalam HTML
+- Menggunakan tag `<table>`, `<tr>`, `<th>`, dan `<td>` dengan benar
+- Menampilkan data terstruktur dalam bentuk tabel
+- Membuat tabel jadwal pelajaran sederhana
 
-## 1️⃣ Tag `<img>`
+## 1️⃣ Fungsi Tabel dalam HTML
 
-Tag `<img>` digunakan untuk menampilkan gambar pada halaman web.
-📌 Karakteristik penting:
+Tabel digunakan untuk **menampilkan data terstruktur** (tabular data), seperti:
 
-- Tidak memiliki tag penutup
-- Bersifat inline element
-- Wajib memiliki atribut `src`
+- Jadwal
+- Daftar nilai
+- Laporan data
+- Rekap informasi
 
-**Contoh Dasar:**
+**📌 Catatan penting:**
+Tabel **bukan** untuk layout halaman (itu tugas CSS Grid/Flex).
 
-```html
-<img src="foto.jpg" />
-```
+## 2️⃣ Struktur Dasar Tabel HTML
 
-## 2️⃣ Atribut Penting pada `<img>`
+**Tag Utama:**
+| Tag | Fungsi |
+| --------- | ----------------- |
+| `<table>` | Pembungkus tabel |
+| `<tr>` | Table row (baris) |
+| `<th>` | Header kolom |
+| `<td>` | Data tabel |
 
-### 🔹 `src` (source)
-
-```html
-<img src="images/foto1.jpg" />
-```
-
-📌 Bisa berupa:
-
-- Path lokal (folder proyek)
-- URL online
-
-### 🔹 `alt` (alternative text)
-
-Digunakan untuk:
-
-- Aksesibilitas (screen reader)
-- Ditampilkan jika gambar gagal dimuat
-- SEO
+**Contoh Struktur Dasar:**
 
 ```html
-<img src="images/foto1.jpg" alt="Foto pemandangan gunung" />
+<table>
+  <tr>
+    <th>Hari</th>
+    <th>Mata Pelajaran</th>
+  </tr>
+  <tr>
+    <td>Senin</td>
+    <td>Matematika</td>
+  </tr>
+</table>
 ```
 
-📌 **Best practice**: selalu gunakan alt.
+## 3️⃣ Border Tabel
 
-### 🔹 width dan height
-
-Digunakan untuk mengatur ukuran gambar.
+Untuk menampilkan garis tabel secara sederhana, gunakan atribut `border`.
 
 ```html
-<img src="images/foto1.jpg" width="300" height="200" />
+<table border="1"></table>
 ```
 
-📌 Satuan default adalah **pixel.**
+📌 Atribut ini digunakan **untuk pembelajaran dasar**.
+Di praktik profesional, border biasanya diatur dengan **CSS**.
 
-## 3️⃣ Struktur Folder Gambar
-
-Pengelolaan folder yang rapi memudahkan pengembangan.
-
-📁 Contoh struktur proyek:
-
-- project-html/
-  - index.html
-  - gallery.html
-  - images/
-    - foto1.jpg
-    - foto2.jpg
-    - foto3.jpg
-
-📌 Praktik ini digunakan di proyek web profesional.
-
-## 4️⃣ Menampilkan Banyak Gambar
+## 4️⃣ Contoh Tabel Lengkap
 
 ```html
-<img src="images/foto1.jpg" alt="Foto 1" width="200" />
-<img src="images/foto2.jpg" alt="Foto 2" width="200" />
-<img src="images/foto3.jpg" alt="Foto 3" width="200" />
+<table border="1">
+  <tr>
+    <th>Hari</th>
+    <th>Jam</th>
+    <th>Mata Pelajaran</th>
+  </tr>
+  <tr>
+    <td>Senin</td>
+    <td>08.00 - 09.30</td>
+    <td>Matematika</td>
+  </tr>
+  <tr>
+    <td>Selasa</td>
+    <td>10.00 - 11.30</td>
+    <td>Bahasa Inggris</td>
+  </tr>
+</table>
 ```
 
-## 5️⃣ Contoh Galeri Foto Sederhana
+## 5️⃣ Best Practice Dasar Tabel
 
-```html
-<h2>Galeri Foto</h2>
+- Gunakan `<th>` untuk judul kolom
+- Jangan gunakan tabel untuk layout
+- Pastikan data mudah dibaca
+- Susun kolom secara konsisten
 
-<img src="images/foto1.jpg" alt="Foto pantai" width="200" />
-<img src="images/foto2.jpg" alt="Foto gunung" width="200" />
-<img src="images/foto3.jpg" alt="Foto kota" width="200" />
-```
-
-📌 Pada tahap ini, galeri masih **tanpa CSS.**
-
-## 🧪 Praktik: Membuat Galeri Foto Sederhana
+## 🧪 Praktik: Membuat Tabel Jadwal Pelajaran
 
 **🎯 Tujuan Praktik**
-Menerapkan penggunaan gambar dan folder media secara benar.
+Menerapkan struktur tabel untuk data jadwal.
 
 **Instruksi:**
+Buat file jadwal.html dengan ketentuan:
 
-1. Buat folder `images`
-2. Masukkan minimal 3 gambar
-3. Buat file `gallery.html`
-4. Tampilkan semua gambar dalam satu halaman
-5. Gunakan atribut `alt` dan `width`
+- Gunakan <table border="1">
+- Minimal 5 baris data
+- Kolom:
+  - Hari
+  - Jam
+  - Mata Pelajaran
 
-**Contoh** `gallery.html`:
+## Contoh Hasil Praktik:
 
 ```html
 <!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Galeri Foto</title>
+    <title>Jadwal Pelajaran</title>
   </head>
   <body>
-    <h1>Galeri Foto</h1>
+    <h1>Jadwal Pelajaran</h1>
 
-    <img src="images/foto1.jpg" alt="Foto pertama" width="250" />
-    <img src="images/foto2.jpg" alt="Foto kedua" width="250" />
-    <img src="images/foto3.jpg" alt="Foto ketiga" width="250" />
+    <table border="1">
+      <tr>
+        <th>Hari</th>
+        <th>Jam</th>
+        <th>Mata Pelajaran</th>
+      </tr>
+      <tr>
+        <td>Senin</td>
+        <td>08.00 - 09.30</td>
+        <td>Matematika</td>
+      </tr>
+      <tr>
+        <td>Selasa</td>
+        <td>09.30 - 11.00</td>
+        <td>Fisika</td>
+      </tr>
+      <tr>
+        <td>Rabu</td>
+        <td>08.00 - 09.30</td>
+        <td>Pemrograman Web</td>
+      </tr>
+    </table>
   </body>
 </html>
 ```
