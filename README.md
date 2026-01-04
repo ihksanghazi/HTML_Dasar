@@ -69,9 +69,9 @@ project-html/
 ├── index.html
 ├── gallery.html
 └── images/
-├── foto1.jpg
-├── foto2.jpg
-└── foto3.jpg
+    ├── foto1.jpg
+    ├── foto2.jpg
+    └── foto3.jpg
 
 📌 Praktik ini digunakan di proyek web profesional.
 
